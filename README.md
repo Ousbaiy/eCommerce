@@ -15,7 +15,7 @@ git clone https://github.com/Ousbaiy/eCommerce.git
 2. Install the dependencies:
 
 ```
-cd my-vite-app
+cd eCommerce
 npm install
 ```
 3. Start the development server:
