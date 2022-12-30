@@ -1,5 +1,5 @@
 
-# My Vite App
+# eCommerce App
 
 This is a simple Vite app built with React. It is designed to be fast and lightweight, making use of the latest web technologies.
 
