@@ -17,8 +17,8 @@ const ProductDetails = () => {
   //if product is not found
   if (!product) {
     return (
-      <section className="h-screen justify-center items-center">
-        Loading...
+      <section className="h-screen flex justify-center items-center">
+        <p>Prodcut not Found</p>
       </section>
     );
   }
