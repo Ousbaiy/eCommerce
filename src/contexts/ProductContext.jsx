@@ -6,7 +6,7 @@ const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchProduct = async () => {
-      const response = await fetch("https://fakestoreapi.com/product");
+      const response = await fetch("https://fakestoreapi.com/products");
       if (!response.ok) {
         throw Error("Could not fetch data")
       }
