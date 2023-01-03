@@ -1,5 +1,5 @@
 
-# My Vite App
+# eCommerce App
 
 This is a simple Vite app built with React. It is designed to be fast and lightweight, making use of the latest web technologies.
 
@@ -10,12 +10,12 @@ To get started with this app, follow these steps:
 1. Clone the repository to your local machine:
 
 ```
-git clone https://github.com/your-username/my-vite-app.git
+git clone https://github.com/Ousbaiy/eCommerce.git
 ```
 2. Install the dependencies:
 
 ```
-cd my-vite-app
+cd eCommerce
 npm install
 ```
 3. Start the development server:
