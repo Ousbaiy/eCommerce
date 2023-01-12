@@ -9,7 +9,7 @@ module.exports = {
     },
     container: {
       padding: {
-        DEFAULT: '30px',
+        DEFAULT: '40px',
         lg: '0',
       },
     },
