@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
-import Sidebar from './components/Sidebar';
 import Header from './components/Header';
+import SideBar from "./Components/SideBar"
 import Footer from './components/Footer';
 import ScrollToTop from "./Components/ScrollToTop"
 
@@ -17,7 +17,7 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path='/product/:id' element={<ProductDetails />} />
       </Routes>
-      <Sidebar />
+      <SideBar />
       <Footer />
     </Router>
   </div>;

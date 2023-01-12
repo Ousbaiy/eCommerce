@@ -27,9 +27,9 @@ const Sidebar = () => {
         </div>
       </div>
       <div className="cart flex flex-1 flex-col gap-y-2 overflow-y-auto overflow-x-hidden border-b px-2">
-        {cart.map((item) => {
-          return <CartItem key={item.id} item={item} />;
-        })}
+        {cart.map((item) => (
+          <CartItem key={item.id} item={item} />
+        ))}
       </div>
       <div className=" flex flex-col gap-y-3 py-4 mt-4">
         <div className="flex w-full justify-between items-center">
