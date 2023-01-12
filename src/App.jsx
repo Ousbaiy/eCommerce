@@ -5,11 +5,13 @@ import ProductDetails from './pages/ProductDetails';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from "./Components/ScrollToTop"
 
 
 const App = () => {
   return <div className='overflow-hidden'>
     <Router>
+    <ScrollToTop />
       <Header />
       <Routes>
         <Route index element={<Home />} />

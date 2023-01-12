@@ -2,18 +2,24 @@ import React, { createContext, useState, useEffect } from "react";
 
 export const CartContext = createContext();
 
+const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart"));
+
 const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(cartFromLocalStorage);
   const [itemAmount, setItemAmount] = useState(0);
   const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   // Total Amount
   useEffect(() => {
     const total = cart.reduce((acc, curItem) => {
-      return acc + curItem.price * curItem.amount
-    }, 0)
+      return acc + curItem.price * curItem.amount;
+    }, 0);
     setTotal(total);
-  }, [cart])
+  }, [cart]);
 
   // ? is better to do it without use State
   // const total = cart.reduce((acc, curItem) => {
@@ -24,11 +30,11 @@ const CartProvider = ({ children }) => {
   useEffect(() => {
     if (cart) {
       const amount = cart.reduce((acc, curItem) => {
-        return acc + curItem.amount
-      }, 0)
-      setItemAmount(amount)
+        return acc + curItem.amount;
+      }, 0);
+      setItemAmount(amount);
     }
-  }, [cart])
+  }, [cart]);
 
   // Add to Cart
   const addToCart = (id, product) => {

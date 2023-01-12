@@ -25,7 +25,7 @@ const Home = () => {
           </div>
           <div className="text-center text-2xl">
             {products.length === 0
-              ? "no data could be fetched please try later"
+              ? "loading data"
               : null}
           </div>
         </div>
