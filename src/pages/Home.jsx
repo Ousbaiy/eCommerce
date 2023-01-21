@@ -4,7 +4,7 @@ import Product from "../components/Product";
 import Hero from "../components/Hero";
 
 const Home = () => {
-  const { products } = useContext(ProductContext);
+  const { products, fetchError } = useContext(ProductContext);
   const filteredProducts = products.filter((item) => {
     return (
       item.category === "men's clothing" || item.category === "women's clothing"
@@ -21,11 +21,15 @@ const Home = () => {
               return <Product product={product} key={product.id} />;
             })}
           </div>
-          <div className="text-center text-2xl">
-            {products.length === 0
-              ? "loading data"
-              : null}
-          </div>
+          {/* handling Error and Loading  */}
+          {fetchError && (
+            <p className="text-center text-2xl text-red-700">{`Error: ${fetchError}`}</p>
+          )}
+          {!products.length && !fetchError ? (
+            <div className="text-center text-2xl">
+              {!products.length ? "loading data" : null}
+            </div>
+          ) : null}
         </div>
       </section>
     </div>
